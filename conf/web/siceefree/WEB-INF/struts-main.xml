@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="main" extends="jsp-package" namespace="/base/main">
+
+		
+<action name="cpHome" class="it.csi.sicee.siceefree.presentation.siceefree.action.main.CpHomeAction">
+	<result name="input">/jsp/cpHome.jsp</result>
+	<result name="success">/jsp/cpHome.jsp</result>
+	
+	<result name="GO_TO_cpHomeHome" type="chain">
+		<param name="actionName">cpHomeHome</param>
+		<param name="namespace">/base/main</param>
+	</result>
+	<result name="GO_TO_cpVerificaEmailNotai" type="chain">
+		<param name="actionName">cpVerificaEmailNotai</param>
+		<param name="namespace">/base/main</param>
+	</result>
+	<result name="GO_TO_BackPage" type="chain">
+		<param name="actionName">${backActionName}</param>
+		<param name="namespace">${backNamespace}</param>
+	</result>
+	
+</action>
+
+<action name="cpHomeHome" class="it.csi.sicee.siceefree.presentation.siceefree.action.main.CpHomeHomeAction">
+	<result name="input">/jsp/cpHomeHome.jsp</result>
+	<result name="success">/jsp/cpHomeHome.jsp</result>
+	
+	<result name="GO_TO_BackPage" type="chain">
+		<param name="actionName">${backActionName}</param>
+		<param name="namespace">${backNamespace}</param>
+	</result>
+	
+</action>
+
+<action name="cpVerificaEmailNotai" class="it.csi.sicee.siceefree.presentation.siceefree.action.main.CpVerificaEmailNotaiAction">
+	<result name="input">/jsp/cpVerificaEmailNotai.jsp</result>
+	<result name="success">/jsp/cpVerificaEmailNotai.jsp</result>
+	
+	<result name="GO_TO_cpHomeHome" type="chain">
+		<param name="actionName">cpHomeHome</param>
+		<param name="namespace">/base/main</param>
+	</result>
+	<result name="GO_TO_BackPage" type="chain">
+		<param name="actionName">${backActionName}</param>
+		<param name="namespace">${backNamespace}</param>
+	</result>
+	
+</action>
+
+<action name="cpErrorPage" class="it.csi.sicee.siceefree.presentation.siceefree.action.main.CpErrorPageAction">
+	<result name="input">/jsp/cpErrorPage.jsp</result>
+	<result name="success">/jsp/cpErrorPage.jsp</result>
+	
+	<result name="GO_TO_BackPage" type="chain">
+		<param name="actionName">${backActionName}</param>
+		<param name="namespace">${backNamespace}</param>
+	</result>
+	
+</action>
+
+<action name="cpDisabled" class="it.csi.sicee.siceefree.presentation.siceefree.action.main.CpDisabledAction">
+	<result name="input">/jsp/cpDisabled.jsp</result>
+	<result name="success">/jsp/cpDisabled.jsp</result>
+	
+	<result name="GO_TO_BackPage" type="chain">
+		<param name="actionName">${backActionName}</param>
+		<param name="namespace">${backNamespace}</param>
+	</result>
+	
+</action>
+
+		<!--PROTECTED REGION ID(R-69127981) ENABLED START-->
+		<!-- inserire qui la dichiarazione di azioni aggiuntive hand-written -->
+		<!--PROTECTED REGION END-->
+
+	</package>
+</struts>

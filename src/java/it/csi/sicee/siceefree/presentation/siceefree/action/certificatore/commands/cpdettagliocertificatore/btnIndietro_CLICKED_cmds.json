@@ -1,0 +1,5 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpCommand" ,
+	"name": "cpRisultatoRicercaCertificatori", 
+	"pushCurrent":false
+}

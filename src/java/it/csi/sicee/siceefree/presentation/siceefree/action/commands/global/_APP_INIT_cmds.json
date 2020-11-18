@@ -1,0 +1,17 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpCommand" ,
+	"name": "cpHome", 
+	"pushCurrent":false
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpCommand" ,
+	"name": "cpDisabled", 
+	"pushCurrent":false
+}
+],
+	"esiti":["OK","KO"],
+	"nomeMetodo":"checkEnabled",
+	"appDataToStore":[]
+}

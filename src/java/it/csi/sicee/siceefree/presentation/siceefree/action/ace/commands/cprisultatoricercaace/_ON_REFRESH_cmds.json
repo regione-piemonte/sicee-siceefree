@@ -1,0 +1,76 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":true,
+	"targetsWidgets":["btnInvioAce","tfEmail"],
+	"targetsMenuElement":[]
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":false,
+	"targetsWidgets":["btnInvioAce","tfEmail"],
+	"targetsMenuElement":[]
+}
+],
+	"esiti":["ENABLE","DISABLE"],
+	"nomeMetodo":"abilitaPulsanteInvioAce",
+	"appDataToStore":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":true,
+	"targetsWidgets":["btnSostituzioni"],
+	"targetsMenuElement":[]
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":false,
+	"targetsWidgets":["btnSostituzioni"],
+	"targetsMenuElement":[]
+}
+],
+	"esiti":["ENABLE_SOS","DISABLE_SOS"],
+	"nomeMetodo":"abilitaPulsanteSostituzioni",
+	"appDataToStore":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":false,
+	"targetsWidgets":["btnStampaCopia"],
+	"targetsMenuElement":[]
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":false,
+	"targetsWidgets":["btnStampaCopia"],
+	"targetsMenuElement":[]
+}
+],
+	"esiti":["ENABLE_COPIA","DISABLE_COPIA"],
+	"nomeMetodo":"abilitaPulsanteStampaCopia",
+	"appDataToStore":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":true,
+	"targetsWidgets":["bStampaReport"],
+	"targetsMenuElement":[]
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":false,
+	"targetsWidgets":["bStampaReport"],
+	"targetsMenuElement":[]
+}
+],
+	"esiti":["ENABLE_REPORT","DISABLE_REPORT"],
+	"nomeMetodo":"abilitaPulsanteStampaReport",
+	"appDataToStore":[]
+}
+] 
+}

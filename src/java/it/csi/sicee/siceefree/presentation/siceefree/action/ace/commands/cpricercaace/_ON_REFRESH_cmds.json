@@ -1,0 +1,23 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.NOPCommand" }
+],
+	"esiti":["OKCOMBO"],
+	"nomeMetodo":"gestisciCombo",
+	"appDataToStore":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.NOPCommand" }
+],
+	"esiti":["OKPRECARICA"],
+	"nomeMetodo":"precaricaFiltroRicercaACE",
+	"appDataToStore":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ClearAppDataCommand" ,
+	"attributesToBeRemovedFromSession":["codAceSelezionato"]
+}
+] 
+}

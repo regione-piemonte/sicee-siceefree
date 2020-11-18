@@ -1,0 +1,17 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.security.ComplexUISecConstraint",
+  "constrainedBehavior": 1,
+  "defaultState": false,
+  "nomeContainer": "cpRisultatoRicercaAce",
+  "nomeWidget": "tfEmail",
+  "constraints": [
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.security.DummyUISecConstraint",
+  "constrainedBehavior": 1,
+  "defaultState": false,
+  "nomeContainer": "cpRisultatoRicercaAce",
+  "nomeWidget": "tfEmail",
+  "fixedValue": true
+}
+
+  ]
+}

@@ -1,0 +1,17 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.security.ComplexUISecConstraint",
+  "constrainedBehavior": 1,
+  "defaultState": true,
+  "nomeContainer": "cpDettaglioCertificatore",
+  "nomeWidget": "lblRagioneSociale",
+  "constraints": [
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.security.DummyUISecConstraint",
+  "constrainedBehavior": 1,
+  "defaultState": true,
+  "nomeContainer": "cpDettaglioCertificatore",
+  "nomeWidget": "lblRagioneSociale",
+  "fixedValue": true
+}
+
+  ]
+}

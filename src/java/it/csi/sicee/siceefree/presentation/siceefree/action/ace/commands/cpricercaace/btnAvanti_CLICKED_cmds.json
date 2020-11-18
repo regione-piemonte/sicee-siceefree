@@ -1,0 +1,19 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpCommand" ,
+	"name": "cpRisultatoRicercaAce", 
+	"pushCurrent":false
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.NOPCommand" }
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpCommand" ,
+	"name": "cpErrorPage", 
+	"pushCurrent":false
+}
+],
+	"esiti":["OK","KO","ABNORMAL"],
+	"nomeMetodo":"ricercaAce",
+	"appDataToStore":["appDatacertificati"]
+}

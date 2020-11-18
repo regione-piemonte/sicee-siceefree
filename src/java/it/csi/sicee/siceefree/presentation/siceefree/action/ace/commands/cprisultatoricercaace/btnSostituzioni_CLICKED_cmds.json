@@ -1,0 +1,23 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ClearAppDataCommand" ,
+	"attributesToBeRemovedFromSession":["filtroAce"]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpCommand" ,
+	"name": "cpVisualizzaSostitutiAce", 
+	"pushCurrent":false
+}
+] 
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.NOPCommand" }
+],
+	"esiti":["OK","KO"],
+	"nomeMetodo":"gestisciSostituzioni",
+	"appDataToStore":[]
+}
+] 
+}

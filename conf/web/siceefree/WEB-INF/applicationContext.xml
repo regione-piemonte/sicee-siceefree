@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="autodetect">
+	<!-- bean di business logic -->
+	
+	<!-- bean di facade -->
+	<bean id="springBackEnd" class="it.csi.sicee.siceefree.business.BackEndFacade">
+		<property name="CPBECpRicercaAce">
+			<ref bean="CPBECpRicercaAce"/>
+		</property>
+		<property name="CPBECpRisultatoRicercaAce">
+			<ref bean="CPBECpRisultatoRicercaAce"/>
+		</property>
+		<property name="CPBECpVisualizzaSostitutiAce">
+			<ref bean="CPBECpVisualizzaSostitutiAce"/>
+		</property>
+		<property name="CPBECpDettaglioAttestato">
+			<ref bean="CPBECpDettaglioAttestato"/>
+		</property>
+		<property name="CPBECpRicercaCertificatori">
+			<ref bean="CPBECpRicercaCertificatori"/>
+		</property>
+		<property name="CPBECpRisultatoRicercaCertificatori">
+			<ref bean="CPBECpRisultatoRicercaCertificatori"/>
+		</property>
+		<property name="CPBECpDettaglioCertificatore">
+			<ref bean="CPBECpDettaglioCertificatore"/>
+		</property>
+		<property name="CPBECpHome">
+			<ref bean="CPBECpHome"/>
+		</property>
+		<property name="CPBECpHomeHome">
+			<ref bean="CPBECpHomeHome"/>
+		</property>
+		<property name="CPBECpVerificaEmailNotai">
+			<ref bean="CPBECpVerificaEmailNotai"/>
+		</property>
+		<property name="CPBECpErrorPage">
+			<ref bean="CPBECpErrorPage"/>
+		</property>
+		<property name="CPBECpDisabled">
+			<ref bean="CPBECpDisabled"/>
+		</property>
+	</bean>
+	
+	<!-- bean relativi ai singoli content panel -->
+	<bean id="CPBECpRicercaAce" class="it.csi.sicee.siceefree.business.ace.CPBECpRicercaAce">
+	</bean>
+	<bean id="CPBECpRisultatoRicercaAce" class="it.csi.sicee.siceefree.business.ace.CPBECpRisultatoRicercaAce">
+	</bean>
+	<bean id="CPBECpVisualizzaSostitutiAce" class="it.csi.sicee.siceefree.business.ace.CPBECpVisualizzaSostitutiAce">
+	</bean>
+	<bean id="CPBECpDettaglioAttestato" class="it.csi.sicee.siceefree.business.ace.CPBECpDettaglioAttestato">
+	</bean>
+	<bean id="CPBECpRicercaCertificatori" class="it.csi.sicee.siceefree.business.certificatore.CPBECpRicercaCertificatori">
+	</bean>
+	<bean id="CPBECpRisultatoRicercaCertificatori" class="it.csi.sicee.siceefree.business.certificatore.CPBECpRisultatoRicercaCertificatori">
+	</bean>
+	<bean id="CPBECpDettaglioCertificatore" class="it.csi.sicee.siceefree.business.certificatore.CPBECpDettaglioCertificatore">
+	</bean>
+	<bean id="CPBECpHome" class="it.csi.sicee.siceefree.business.main.CPBECpHome">
+	</bean>
+	<bean id="CPBECpHomeHome" class="it.csi.sicee.siceefree.business.main.CPBECpHomeHome">
+	</bean>
+	<bean id="CPBECpVerificaEmailNotai" class="it.csi.sicee.siceefree.business.main.CPBECpVerificaEmailNotai">
+	</bean>
+	<bean id="CPBECpErrorPage" class="it.csi.sicee.siceefree.business.main.CPBECpErrorPage">
+	</bean>
+	<bean id="CPBECpDisabled" class="it.csi.sicee.siceefree.business.main.CPBECpDisabled">
+	</bean>
+	
+	
+	
+	<!-- helper per le funzioni di securizzazione -->
+	<bean id="springSecurityHelper" class="it.csi.sicee.siceefree.business.SecurityHelper">
+		<!-- protocollo di interazione con il PEP (EJB|WS) utilizzato solo se la security non e' custom --> 
+		<property name="PDProtocol" value="@IRIDE_PD_PROTOCOL@" />
+	</bean>
+	
+	
+	
+	
+	<!--PROTECTED REGION ID(R585863764) ENABLED START-->
+		<!-- Inserire qui configurazioni aggiuntive da iniettare nel bean prinicipale -->
+		<bean id="soaIntegrationMgr" class="it.csi.sicee.siceefree.business.facade.SOAIntegrationMgr">
+		</bean>
+		
+		<bean id="activationMgr" class="it.csi.sicee.siceefree.business.facade.ActivationMgr">
+		</bean>		
+	<!--PROTECTED REGION END-->
+
+</beans>

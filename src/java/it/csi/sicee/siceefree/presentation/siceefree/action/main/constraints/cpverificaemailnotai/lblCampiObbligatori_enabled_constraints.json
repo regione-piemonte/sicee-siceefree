@@ -1,0 +1,17 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.security.ComplexUISecConstraint",
+  "constrainedBehavior": 1,
+  "defaultState": true,
+  "nomeContainer": "cpVerificaEmailNotai",
+  "nomeWidget": "lblCampiObbligatori",
+  "constraints": [
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.security.DummyUISecConstraint",
+  "constrainedBehavior": 1,
+  "defaultState": true,
+  "nomeContainer": "cpVerificaEmailNotai",
+  "nomeWidget": "lblCampiObbligatori",
+  "fixedValue": true
+}
+
+  ]
+}

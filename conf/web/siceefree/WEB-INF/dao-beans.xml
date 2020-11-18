@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+<!--PROTECTED REGION ID(R-272746236) ENABLED START-->
+	<!-- 
+		Esempio di configurazione di datasource, transaction manager, incrementer e dao 
+	-->
+	<!-- bean del datasource 
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:/GericaDS" />
+		<property name="proxyInterface" value="javax.sql.DataSource" />
+	</bean>
+	-->
+	
+	<!-- annotazione per utilizzare il transaction manager dell'app.server
+	<tx:annotation-driven transaction-manager="txManager"
+		proxy-target-class="true" />
+	-->
+	<!-- annotazione per utilizzare il transaction manager dell'app.server jboss
+	<bean id="txManager"
+		class="org.springframework.transaction.jta.JtaTransactionManager" />
+	-->
+	
+	<!-- annotazione per utilizzare il transaction manager dell'app.server weblogic
+		transaction manager bea <bean id="txManager"
+		class="org.springframework.transaction.jta.WebLogicJtaTransactionManager"
+		/>
+	-->
+
+	<!-- jdbc template
+	<bean id="namedJdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
+		<constructor-arg ref="dataSource" />
+	</bean>
+	-->
+
+	<!--  
+    <bean id="XYZ_ID_Incrementer"
+		class="org.springframework.jdbc.support.incrementer.OracleSequenceMaxValueIncrementer">
+		<constructor-arg>
+			<ref bean="datasource" />
+		</constructor-arg>
+		<constructor-arg>
+			<value>ID</value>
+		</constructor-arg>
+	</bean>
+	-->
+	
+	<!-- bean del singolo DAO
+	<bean id="XYZDao"
+		class="it.csi.sicee.siceefree.business.dao.spring.XYZDaoImpl">
+		<property name="jdbcTemplate" ref="namedJdbcTemplate" />
+		<property name="incrementer" ref="XYZ_ID_Incrementer" />
+	</bean>
+	-->
+
+	<!--PROTECTED REGION END-->
+</beans>

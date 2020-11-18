@@ -1,0 +1,12 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpCommand" ,
+	"name": "cpVerificaEmailNotai", 
+	"pushCurrent":false
+}
+],
+	"esiti":["OK"],
+	"nomeMetodo":"selezionaNotaio",
+	"appDataToStore":[]
+}

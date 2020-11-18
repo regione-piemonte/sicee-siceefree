@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files>
+	<!-- risorse caricate in ogni pagina -->
+	<file page="all">
+<resource type="text/css">
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/base/jquery.ui.all.css" />
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/css/sisp7/css/xtheme-sisp7.css" />
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jquery/1.10.2/jquery-1.10.2.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.core.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.widget.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.mouse.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.position.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.menu.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.datepicker.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.autocomplete.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.tooltip.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.button.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.dialog.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.draggable.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.droppable.js" />
+	<position value="/ris/utheme/global/jslib/jqueryUI/1.10.4/ui/jquery.ui.resizable.js" />
+	<position value="/ris/utheme/global/jslib/ckeditor/3.6.4/ckeditor.js" />
+</resource>
+	</file>	
+	<!-- risorse specifiche del ContentPanel [cpRicercaAce] -->
+	<file page="cpRicercaAce">
+
+<resource type="text/css">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/css/ajaxify.css" />
+	
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/oojsutils/oojsutils.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/enricher/enricher.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/ajaxifyTag.js" />
+	<!-- clessidra di attesa -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/blockui/jquery.blockUI.js" />
+	<!-- keyfilter -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/keyfilter/jquery.keyfilter.js" />
+	<!-- jqtooltip -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqtooltip/jqtooltip.js" />
+	<!-- jqmenu -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/sf/superfish.click.csi.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/jqmenu.js" />
+	<!-- jqpanel -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqpanel/jqpanel.js" />
+	<!-- ytoggle -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ytoggle/ytoggle.js" />
+	<!-- jqbutton -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.init.js" />	
+	<!-- dialog -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ui-dialogahah/ui-dialogahah.js" />
+	<!-- slider -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ionrangeslider/ion.rangeSlider.js" />
+	
+	<!-- componente js dello skin -->
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/js/style.js" />
+	<!-- funzioni comuni all' applicativo (opz) -->
+	<position value="ris/js/localLibs.js" />
+	<!-- stilizzazioni JS locali (opz) -->
+	<position value="/ris/utheme/sisp7/siceefree/js/localStyle.js" />
+	<!-- arricchimenti della schermata -->
+	<position value="ris/js/enrichments/cpRicercaAce.js" />
+</resource>
+
+
+	</file>
+	<!-- risorse specifiche del ContentPanel [cpRisultatoRicercaAce] -->
+	<file page="cpRisultatoRicercaAce">
+
+<resource type="text/css">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/css/ajaxify.css" />
+	
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/oojsutils/oojsutils.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/enricher/enricher.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/ajaxifyTag.js" />
+	<!-- clessidra di attesa -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/blockui/jquery.blockUI.js" />
+	<!-- keyfilter -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/keyfilter/jquery.keyfilter.js" />
+	<!-- jqtooltip -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqtooltip/jqtooltip.js" />
+	<!-- jqmenu -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/sf/superfish.click.csi.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/jqmenu.js" />
+	<!-- jqpanel -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqpanel/jqpanel.js" />
+	<!-- ytoggle -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ytoggle/ytoggle.js" />
+	<!-- jqbutton -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.init.js" />	
+	<!-- dialog -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ui-dialogahah/ui-dialogahah.js" />
+	<!-- slider -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ionrangeslider/ion.rangeSlider.js" />
+	
+	<!-- componente js dello skin -->
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/js/style.js" />
+	<!-- funzioni comuni all' applicativo (opz) -->
+	<position value="ris/js/localLibs.js" />
+	<!-- stilizzazioni JS locali (opz) -->
+	<position value="/ris/utheme/sisp7/siceefree/js/localStyle.js" />
+	<!-- arricchimenti della schermata -->
+	<position value="ris/js/enrichments/cpRisultatoRicercaAce.js" />
+</resource>
+
+
+	</file>
+	<!-- risorse specifiche del ContentPanel [cpVisualizzaSostitutiAce] -->
+	<file page="cpVisualizzaSostitutiAce">
+
+<resource type="text/css">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/css/ajaxify.css" />
+	
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/oojsutils/oojsutils.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/enricher/enricher.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/ajaxifyTag.js" />
+	<!-- clessidra di attesa -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/blockui/jquery.blockUI.js" />
+	<!-- keyfilter -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/keyfilter/jquery.keyfilter.js" />
+	<!-- jqtooltip -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqtooltip/jqtooltip.js" />
+	<!-- jqmenu -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/sf/superfish.click.csi.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/jqmenu.js" />
+	<!-- jqpanel -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqpanel/jqpanel.js" />
+	<!-- ytoggle -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ytoggle/ytoggle.js" />
+	<!-- jqbutton -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.init.js" />	
+	<!-- dialog -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ui-dialogahah/ui-dialogahah.js" />
+	<!-- slider -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ionrangeslider/ion.rangeSlider.js" />
+	
+	<!-- componente js dello skin -->
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/js/style.js" />
+	<!-- funzioni comuni all' applicativo (opz) -->
+	<position value="ris/js/localLibs.js" />
+	<!-- stilizzazioni JS locali (opz) -->
+	<position value="/ris/utheme/sisp7/siceefree/js/localStyle.js" />
+	<!-- arricchimenti della schermata -->
+	<position value="ris/js/enrichments/cpVisualizzaSostitutiAce.js" />
+</resource>
+
+
+	</file>
+	<!-- risorse specifiche del ContentPanel [cpDettaglioAttestato] -->
+	<file page="cpDettaglioAttestato">
+
+<resource type="text/css">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/css/ajaxify.css" />
+	
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/oojsutils/oojsutils.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/enricher/enricher.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/ajaxifyTag.js" />
+	<!-- clessidra di attesa -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/blockui/jquery.blockUI.js" />
+	<!-- keyfilter -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/keyfilter/jquery.keyfilter.js" />
+	<!-- jqtooltip -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqtooltip/jqtooltip.js" />
+	<!-- jqmenu -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/sf/superfish.click.csi.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/jqmenu.js" />
+	<!-- jqpanel -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqpanel/jqpanel.js" />
+	<!-- ytoggle -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ytoggle/ytoggle.js" />
+	<!-- jqbutton -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.init.js" />	
+	<!-- dialog -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ui-dialogahah/ui-dialogahah.js" />
+	<!-- slider -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ionrangeslider/ion.rangeSlider.js" />
+	
+	<!-- componente js dello skin -->
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/js/style.js" />
+	<!-- funzioni comuni all' applicativo (opz) -->
+	<position value="ris/js/localLibs.js" />
+	<!-- stilizzazioni JS locali (opz) -->
+	<position value="/ris/utheme/sisp7/siceefree/js/localStyle.js" />
+	<!-- arricchimenti della schermata -->
+	<position value="ris/js/enrichments/cpDettaglioAttestato.js" />
+</resource>
+
+
+	</file>
+	<!-- risorse specifiche del ContentPanel [cpRicercaCertificatori] -->
+	<file page="cpRicercaCertificatori">
+
+<resource type="text/css">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/css/ajaxify.css" />
+	
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/oojsutils/oojsutils.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/enricher/enricher.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/ajaxifyTag.js" />
+	<!-- clessidra di attesa -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/blockui/jquery.blockUI.js" />
+	<!-- keyfilter -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/keyfilter/jquery.keyfilter.js" />
+	<!-- jqtooltip -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqtooltip/jqtooltip.js" />
+	<!-- jqmenu -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/sf/superfish.click.csi.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/jqmenu.js" />
+	<!-- jqpanel -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqpanel/jqpanel.js" />
+	<!-- ytoggle -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ytoggle/ytoggle.js" />
+	<!-- jqbutton -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.init.js" />	
+	<!-- dialog -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ui-dialogahah/ui-dialogahah.js" />
+	<!-- slider -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ionrangeslider/ion.rangeSlider.js" />
+	
+	<!-- componente js dello skin -->
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/js/style.js" />
+	<!-- funzioni comuni all' applicativo (opz) -->
+	<position value="ris/js/localLibs.js" />
+	<!-- stilizzazioni JS locali (opz) -->
+	<position value="/ris/utheme/sisp7/siceefree/js/localStyle.js" />
+	<!-- arricchimenti della schermata -->
+	<position value="ris/js/enrichments/cpRicercaCertificatori.js" />
+</resource>
+
+
+	</file>
+	<!-- risorse specifiche del ContentPanel [cpRisultatoRicercaCertificatori] -->
+	<file page="cpRisultatoRicercaCertificatori">
+
+<resource type="text/css">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/css/ajaxify.css" />
+	
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/oojsutils/oojsutils.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/enricher/enricher.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/ajaxifyTag.js" />
+	<!-- clessidra di attesa -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/blockui/jquery.blockUI.js" />
+	<!-- keyfilter -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/keyfilter/jquery.keyfilter.js" />
+	<!-- jqtooltip -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqtooltip/jqtooltip.js" />
+	<!-- jqmenu -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/sf/superfish.click.csi.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/jqmenu.js" />
+	<!-- jqpanel -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqpanel/jqpanel.js" />
+	<!-- ytoggle -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ytoggle/ytoggle.js" />
+	<!-- jqbutton -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.init.js" />	
+	<!-- dialog -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ui-dialogahah/ui-dialogahah.js" />
+	<!-- slider -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ionrangeslider/ion.rangeSlider.js" />
+	
+	<!-- componente js dello skin -->
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/js/style.js" />
+	<!-- funzioni comuni all' applicativo (opz) -->
+	<position value="ris/js/localLibs.js" />
+	<!-- stilizzazioni JS locali (opz) -->
+	<position value="/ris/utheme/sisp7/siceefree/js/localStyle.js" />
+	<!-- arricchimenti della schermata -->
+	<position value="ris/js/enrichments/cpRisultatoRicercaCertificatori.js" />
+</resource>
+
+
+	</file>
+	<!-- risorse specifiche del ContentPanel [cpDettaglioCertificatore] -->
+	<file page="cpDettaglioCertificatore">
+
+<resource type="text/css">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/css/ajaxify.css" />
+	
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/oojsutils/oojsutils.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/enricher/enricher.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/ajaxifyTag.js" />
+	<!-- clessidra di attesa -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/blockui/jquery.blockUI.js" />
+	<!-- keyfilter -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/keyfilter/jquery.keyfilter.js" />
+	<!-- jqtooltip -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqtooltip/jqtooltip.js" />
+	<!-- jqmenu -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/sf/superfish.click.csi.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/jqmenu.js" />
+	<!-- jqpanel -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqpanel/jqpanel.js" />
+	<!-- ytoggle -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ytoggle/ytoggle.js" />
+	<!-- jqbutton -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.init.js" />	
+	<!-- dialog -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ui-dialogahah/ui-dialogahah.js" />
+	<!-- slider -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ionrangeslider/ion.rangeSlider.js" />
+	
+	<!-- componente js dello skin -->
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/js/style.js" />
+	<!-- funzioni comuni all' applicativo (opz) -->
+	<position value="ris/js/localLibs.js" />
+	<!-- stilizzazioni JS locali (opz) -->
+	<position value="/ris/utheme/sisp7/siceefree/js/localStyle.js" />
+	<!-- arricchimenti della schermata -->
+	<position value="ris/js/enrichments/cpDettaglioCertificatore.js" />
+</resource>
+
+
+	</file>
+	<!-- risorse specifiche del ContentPanel [cpHome] -->
+	<file page="cpHome">
+
+<resource type="text/css">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/css/ajaxify.css" />
+	
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/oojsutils/oojsutils.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/enricher/enricher.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/ajaxifyTag.js" />
+	<!-- clessidra di attesa -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/blockui/jquery.blockUI.js" />
+	<!-- keyfilter -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/keyfilter/jquery.keyfilter.js" />
+	<!-- jqtooltip -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqtooltip/jqtooltip.js" />
+	<!-- jqmenu -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/sf/superfish.click.csi.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/jqmenu.js" />
+	<!-- jqpanel -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqpanel/jqpanel.js" />
+	<!-- ytoggle -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ytoggle/ytoggle.js" />
+	<!-- jqbutton -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.init.js" />	
+	<!-- dialog -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ui-dialogahah/ui-dialogahah.js" />
+	<!-- slider -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ionrangeslider/ion.rangeSlider.js" />
+	
+	<!-- componente js dello skin -->
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/js/style.js" />
+	<!-- funzioni comuni all' applicativo (opz) -->
+	<position value="ris/js/localLibs.js" />
+	<!-- stilizzazioni JS locali (opz) -->
+	<position value="/ris/utheme/sisp7/siceefree/js/localStyle.js" />
+	<!-- arricchimenti della schermata -->
+	<position value="ris/js/enrichments/cpHome.js" />
+</resource>
+
+
+	</file>
+	<!-- risorse specifiche del ContentPanel [cpHomeHome] -->
+	<file page="cpHomeHome">
+
+<resource type="text/css">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/css/ajaxify.css" />
+	
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/oojsutils/oojsutils.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/enricher/enricher.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/ajaxifyTag.js" />
+	<!-- clessidra di attesa -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/blockui/jquery.blockUI.js" />
+	<!-- keyfilter -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/keyfilter/jquery.keyfilter.js" />
+	<!-- jqtooltip -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqtooltip/jqtooltip.js" />
+	<!-- jqmenu -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/sf/superfish.click.csi.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/jqmenu.js" />
+	<!-- jqpanel -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqpanel/jqpanel.js" />
+	<!-- ytoggle -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ytoggle/ytoggle.js" />
+	<!-- jqbutton -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.init.js" />	
+	<!-- dialog -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ui-dialogahah/ui-dialogahah.js" />
+	<!-- slider -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ionrangeslider/ion.rangeSlider.js" />
+	
+	<!-- componente js dello skin -->
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/js/style.js" />
+	<!-- funzioni comuni all' applicativo (opz) -->
+	<position value="ris/js/localLibs.js" />
+	<!-- stilizzazioni JS locali (opz) -->
+	<position value="/ris/utheme/sisp7/siceefree/js/localStyle.js" />
+	<!-- arricchimenti della schermata -->
+	<position value="ris/js/enrichments/cpHomeHome.js" />
+</resource>
+
+
+	</file>
+	<!-- risorse specifiche del ContentPanel [cpVerificaEmailNotai] -->
+	<file page="cpVerificaEmailNotai">
+
+<resource type="text/css">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/css/ajaxify.css" />
+	
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/oojsutils/oojsutils.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/enricher/enricher.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/ajaxifyTag.js" />
+	<!-- clessidra di attesa -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/blockui/jquery.blockUI.js" />
+	<!-- keyfilter -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/keyfilter/jquery.keyfilter.js" />
+	<!-- jqtooltip -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqtooltip/jqtooltip.js" />
+	<!-- jqmenu -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/sf/superfish.click.csi.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/jqmenu.js" />
+	<!-- jqpanel -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqpanel/jqpanel.js" />
+	<!-- ytoggle -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ytoggle/ytoggle.js" />
+	<!-- jqbutton -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.init.js" />	
+	<!-- dialog -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ui-dialogahah/ui-dialogahah.js" />
+	<!-- slider -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ionrangeslider/ion.rangeSlider.js" />
+	
+	<!-- componente js dello skin -->
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/js/style.js" />
+	<!-- funzioni comuni all' applicativo (opz) -->
+	<position value="ris/js/localLibs.js" />
+	<!-- stilizzazioni JS locali (opz) -->
+	<position value="/ris/utheme/sisp7/siceefree/js/localStyle.js" />
+	<!-- arricchimenti della schermata -->
+	<position value="ris/js/enrichments/cpVerificaEmailNotai.js" />
+</resource>
+
+
+	</file>
+	<!-- risorse specifiche del ContentPanel [cpErrorPage] -->
+	<file page="cpErrorPage">
+
+<resource type="text/css">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/css/ajaxify.css" />
+	
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/oojsutils/oojsutils.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/enricher/enricher.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/ajaxifyTag.js" />
+	<!-- clessidra di attesa -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/blockui/jquery.blockUI.js" />
+	<!-- keyfilter -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/keyfilter/jquery.keyfilter.js" />
+	<!-- jqtooltip -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqtooltip/jqtooltip.js" />
+	<!-- jqmenu -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/sf/superfish.click.csi.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/jqmenu.js" />
+	<!-- jqpanel -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqpanel/jqpanel.js" />
+	<!-- ytoggle -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ytoggle/ytoggle.js" />
+	<!-- jqbutton -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.init.js" />	
+	<!-- dialog -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ui-dialogahah/ui-dialogahah.js" />
+	<!-- slider -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ionrangeslider/ion.rangeSlider.js" />
+	
+	<!-- componente js dello skin -->
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/js/style.js" />
+	<!-- funzioni comuni all' applicativo (opz) -->
+	<position value="ris/js/localLibs.js" />
+	<!-- stilizzazioni JS locali (opz) -->
+	<position value="/ris/utheme/sisp7/siceefree/js/localStyle.js" />
+	<!-- arricchimenti della schermata -->
+	<position value="ris/js/enrichments/cpErrorPage.js" />
+</resource>
+
+
+	</file>
+	<!-- risorse specifiche del ContentPanel [cpDisabled] -->
+	<file page="cpDisabled">
+
+<resource type="text/css">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/css/ajaxify.css" />
+	
+</resource>
+<resource type="text/javascript">
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/oojsutils/oojsutils.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/enricher/enricher.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/ajaxify-tag/ajaxifyTag.js" />
+	<!-- clessidra di attesa -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/blockui/jquery.blockUI.js" />
+	<!-- keyfilter -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/keyfilter/jquery.keyfilter.js" />
+	<!-- jqtooltip -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqtooltip/jqtooltip.js" />
+	<!-- jqmenu -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/sf/superfish.click.csi.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqmenu/jqmenu.js" />
+	<!-- jqpanel -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqpanel/jqpanel.js" />
+	<!-- ytoggle -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ytoggle/ytoggle.js" />
+	<!-- jqbutton -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.js" />
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/jqbutton/jqbutton.init.js" />	
+	<!-- dialog -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ui-dialogahah/ui-dialogahah.js" />
+	<!-- slider -->
+	<position value="/ris/utheme/global/jslib/jqcsienricher/1.1.latest/plugins/ionrangeslider/ion.rangeSlider.js" />
+	
+	<!-- componente js dello skin -->
+	<position value="/ris/utheme/global/themes/jqlibsthemeV1/js/style.js" />
+	<!-- funzioni comuni all' applicativo (opz) -->
+	<position value="ris/js/localLibs.js" />
+	<!-- stilizzazioni JS locali (opz) -->
+	<position value="/ris/utheme/sisp7/siceefree/js/localStyle.js" />
+	<!-- arricchimenti della schermata -->
+	<position value="ris/js/enrichments/cpDisabled.js" />
+</resource>
+
+
+	</file>
+</files>

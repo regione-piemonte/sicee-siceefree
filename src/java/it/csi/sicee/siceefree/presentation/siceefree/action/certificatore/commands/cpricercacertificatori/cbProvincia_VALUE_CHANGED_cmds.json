@@ -1,0 +1,9 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.NOPCommand" }
+],
+	"esiti":["OK"],
+	"nomeMetodo":"setProvinciaRicercaCertificatore",
+	"appDataToStore":[]
+}

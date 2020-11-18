@@ -1,0 +1,16 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpExtCommand" ,
+	"locationCode":"OK",
+	"runtimeUrlProviderAppData":"",
+	"staticUrl":"/base/scaricaAttestato.do",
+	"binaryStream":false 
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.NOPCommand" }
+],
+	"esiti":["OK","KO"],
+	"nomeMetodo":"scaricaModulo",
+	"appDataToStore":[]
+}

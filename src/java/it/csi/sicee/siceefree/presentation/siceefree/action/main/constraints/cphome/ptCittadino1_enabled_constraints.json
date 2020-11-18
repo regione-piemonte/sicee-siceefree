@@ -1,0 +1,17 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.security.ComplexUISecConstraint",
+  "constrainedBehavior": 1,
+  "defaultState": true,
+  "nomeContainer": "cpHome",
+  "nomeWidget": "ptCittadino1",
+  "constraints": [
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.security.DummyUISecConstraint",
+  "constrainedBehavior": 1,
+  "defaultState": true,
+  "nomeContainer": "cpHome",
+  "nomeWidget": "ptCittadino1",
+  "fixedValue": true
+}
+
+  ]
+}

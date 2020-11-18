@@ -1,0 +1,22 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":true,
+	"targetsWidgets":["btnDettaglio"],
+	"targetsMenuElement":[]
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":false,
+	"targetsWidgets":["btnDettaglio"],
+	"targetsMenuElement":[]
+}
+],
+	"esiti":["ENABLE","DISABLE"],
+	"nomeMetodo":"abilitaPulsanteDettaglio",
+	"appDataToStore":[]
+}
+] 
+}

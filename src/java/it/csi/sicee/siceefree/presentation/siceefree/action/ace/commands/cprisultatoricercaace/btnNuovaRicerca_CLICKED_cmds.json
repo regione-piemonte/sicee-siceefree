@@ -1,0 +1,11 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ClearAppDataCommand" ,
+	"attributesToBeRemovedFromSession":["filtroAce"]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpCommand" ,
+	"name": "cpRicercaAce", 
+	"pushCurrent":false
+}
+] 
+}

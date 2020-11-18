@@ -1,0 +1,25 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.NOPCommand" }
+],
+	"esiti":["OK"],
+	"nomeMetodo":"salvaLogAccesso",
+	"appDataToStore":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpCommand" ,
+	"name": "cpHomeHome", 
+	"pushCurrent":false
+}
+] 
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.NOPCommand" }
+],
+	"esiti":["OK","KO"],
+	"nomeMetodo":"verificaEmailNotaio",
+	"appDataToStore":[]
+}
