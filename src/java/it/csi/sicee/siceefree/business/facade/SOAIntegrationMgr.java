@@ -28,6 +28,7 @@ import it.csi.sicee.siceefree.util.Converter;
 import it.csi.sicee.siceefree.util.GenericUtil;
 import it.csi.sicee.siceefree.util.MailSender;
 import it.csi.sicee.siceeorch.dto.siceeorch.Documento;
+import it.csi.sicee.siceeorch.dto.siceeorch.Impianto;
 import it.csi.sicee.siceeorch.dto.siceeorch.InvioLog;
 import it.csi.sicee.siceeorch.dto.siceeorch.Protocollazione;
 import it.csi.sicee.siceeorch.exception.siceeorch.DocumentoException;
@@ -817,8 +818,8 @@ public class SOAIntegrationMgr extends BaseMgr {
 	 */
 	public boolean updateInvioLog(it.csi.sicee.siceefree.dto.notaio.Notaio notaio, Ace ace) {
 		try {
-			
-			
+			log.debug("ace uid: "+ace.getUid());
+
 			Documento doc = recuperaDocumento(ace.getUid());
 			if (doc.getDoc() == null)
 				return false;
@@ -829,6 +830,10 @@ public class SOAIntegrationMgr extends BaseMgr {
 			
 			email.setHost(Constants.MAIL_HOST);
 			email.setPort(Constants.MAIL_PORT);
+			
+			email.setIdEmail(Constants.MAIL_USER);
+			email.setPassword(Constants.MAIL_PWD);
+			
 			email.setMittente(getParametro(Constants.MAIL_MITT));
 			
 			email.setOggetto(creaOggettoEmail(notaio, ace));
@@ -859,11 +864,32 @@ public class SOAIntegrationMgr extends BaseMgr {
 			
 			GenericUtil.stampa(protocollazione, true, 3);
 			
-			email.setHtml(creaHtmlEmail(notaio, ace, protocollazione));
-			email.setTesto(creaTestoEmail(notaio, ace, protocollazione));
-			
-			
-			
+			Integer codImpianto = null;
+			List<Documento> docs = new ArrayList<>();
+			docs.add(doc);
+
+			try {
+				codImpianto = srv.getCodImpiantoByApe(ace.getCertificatore(), ace.getNumero(), ace.getAnno());
+				if(codImpianto != null) {
+					Impianto[] impianti = srv.findImpiantoByCodice(codImpianto);
+					log.debug("Impianti: " + impianti);
+					if (impianti != null && impianti.length != 0) {
+						log.debug("uid libretto: " + impianti[0].getUidIndexLibretto());
+						if (impianti[0].getUidIndexLibretto() != null) {
+							Documento doc2 = srv.findLibrettoByUID(impianti[0].getUidIndexLibretto());
+							log.debug("DOC2: " + doc2);
+							if (doc2 != null)
+								docs.add(doc2);
+						}
+					}
+				}
+			}catch (Exception e){
+				log.error("Impossibile recuperare il libretto impianto");
+			}
+
+			email.setHtml(creaHtmlEmail(notaio, ace, protocollazione,codImpianto));
+			email.setTesto(creaTestoEmail(notaio, ace, protocollazione,codImpianto));
+
 			byte[] ricevutaInvioByte = srv.getStampaRicevutaInvioAce(ace.getCertificatore(), ace.getNumero(), ace.getAnno());
 			
 			/*
@@ -879,7 +905,7 @@ public class SOAIntegrationMgr extends BaseMgr {
 			
 			try
 			{
-				sender.sendMail(email, doc, ricevutaInvioByte);
+				sender.sendMail(email, docs, ricevutaInvioByte);
 			}
 			catch (Exception e) {
 				// ho ricevuto un'eccezione nell'invio mail
@@ -887,7 +913,7 @@ public class SOAIntegrationMgr extends BaseMgr {
 
 				log.error("Errore nell'invio della mail", e);
 
-				boolean isMailInviataService = sendMailService(email, doc, ricevutaInvioByte);
+				boolean isMailInviataService = sendMailService(email, docs, ricevutaInvioByte);
 				
 				if (!isMailInviataService)
 				{
@@ -931,7 +957,7 @@ public class SOAIntegrationMgr extends BaseMgr {
 	 * @param ace the ace
 	 * @return the string
 	 */
-	private String creaHtmlEmail(it.csi.sicee.siceefree.dto.notaio.Notaio not, Ace ace, Protocollazione protocollazione) {
+	private String creaHtmlEmail(it.csi.sicee.siceefree.dto.notaio.Notaio not, Ace ace, Protocollazione protocollazione,Integer codiceImpianto) {
 		String msg = null;
 		
 		
@@ -948,9 +974,10 @@ public class SOAIntegrationMgr extends BaseMgr {
 			messaggio = messaggio.replaceAll(Constants.NOME_CERTIFICATORE, ace.getNome());
 			messaggio = messaggio.replaceAll(Constants.COGNOME_CERTIFICATORE, ace.getCognome());
 			
-			messaggio = messaggio.replaceAll(Constants.PROTOCOLLO, creaTestoProtocollo(protocollazione));	
-			
-			
+			messaggio = messaggio.replaceAll(Constants.PROTOCOLLO, creaTestoProtocollo(protocollazione));
+
+			messaggio = codiceImpianto!=null? messaggio.replaceAll(Constants.CODICE_IMPIANTO,codiceImpianto.toString()):messaggio.replaceAll(Constants.CODICE_IMPIANTO,"-");
+
 			messaggio = messaggio.replaceAll(Constants.DATA_INVIO, ace.getDataInvio());
 			messaggio = messaggio.replaceAll(Constants.DATA_TRASMISSIONE, ace.getDataUpload());
 			
@@ -971,7 +998,7 @@ public class SOAIntegrationMgr extends BaseMgr {
 	 * @param ace the ace
 	 * @return the string
 	 */
-	private String creaTestoEmail(it.csi.sicee.siceefree.dto.notaio.Notaio not, Ace ace, Protocollazione protocollazione) {
+	private String creaTestoEmail(it.csi.sicee.siceefree.dto.notaio.Notaio not, Ace ace, Protocollazione protocollazione, Integer codiceImpianto) {
 		String msg = null;
 		
 		
@@ -986,6 +1013,8 @@ public class SOAIntegrationMgr extends BaseMgr {
 			messaggio = messaggio.replaceAll(Constants.NOME_CERTIFICATORE, ace.getNome());
 			messaggio = messaggio.replaceAll(Constants.COGNOME_CERTIFICATORE, ace.getCognome());
 			messaggio = messaggio.replaceAll(Constants.DATA_INVIO, ace.getDataInvio());
+			messaggio = codiceImpianto!=null? messaggio.replaceAll(Constants.CODICE_IMPIANTO,codiceImpianto.toString()):messaggio.replaceAll(Constants.CODICE_IMPIANTO,"-");
+
 			//messaggio = messaggio.replaceAll(Constants.DATA_TRASMISSIONE, ace.getDataUpload());
 			
 			msg = messaggio;
@@ -1049,7 +1078,7 @@ public class SOAIntegrationMgr extends BaseMgr {
 	}
 	
 	public boolean sendMailService(it.csi.sicee.siceefree.util.Mail emailVo,
-			Documento doc, byte[] ricevutaInvioByte) throws Exception{
+			List<Documento> docs, byte[] ricevutaInvioByte) throws Exception{
 		
 		log.info("[SOAIntegrationMgr::sendMailService] START");
 
@@ -1072,15 +1101,15 @@ public class SOAIntegrationMgr extends BaseMgr {
 			
 			ArrayList<Allegato> elencoAllegati = new ArrayList<Allegato>();
 
-			if (doc != null)
+			if (docs != null)
 			{
-				
-				it.csi.sicee.siceews.stubs.Allegato allegatoApe = new Allegato();
-				allegatoApe.setNomeFile(doc.getNome());
-				allegatoApe.setContentType("application/pkcs7-mime");
-				allegatoApe.setFile(doc.getDoc());
-				elencoAllegati.add(allegatoApe);
-
+				for(Documento doc:docs) {
+					it.csi.sicee.siceews.stubs.Allegato allegatoApe = new Allegato();
+					allegatoApe.setNomeFile(doc.getNome());
+					allegatoApe.setContentType("application/pkcs7-mime");
+					allegatoApe.setFile(doc.getDoc());
+					elencoAllegati.add(allegatoApe);
+				}
 			}
 			
 			if (ricevutaInvioByte != null)
@@ -1129,5 +1158,13 @@ public class SOAIntegrationMgr extends BaseMgr {
 			throw new BEException("Errore in insertLogAccesso:" + e, e);
 		}
 
+	}
+
+	public it.csi.sicee.siceeorch.dto.siceeorch.DettaglioGeografico[] getDettaglioGeoportale(String x, String y, String classe) throws CSIException, BEException {
+		try {
+			return srv.getDettaglioGeografico(x, y, classe);
+		} catch (SiceesrvException e) {
+			throw new BEException("Errore in getDettaglioGeoportale:" + e, e);
+		}
 	}
 }

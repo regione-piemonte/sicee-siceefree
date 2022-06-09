@@ -21,6 +21,7 @@
 			,it/csi/sicee/siceefree/presentation/siceefree/action/main/CpVerificaEmailNotaiAction
 			,it/csi/sicee/siceefree/presentation/siceefree/action/main/CpErrorPageAction
 			,it/csi/sicee/siceefree/presentation/siceefree/action/main/CpDisabledAction
+			,it/csi/sicee/siceefree/presentation/siceefree/action/main/CpDettWMSAction
 	" />
 	<constant name="struts.multipart.parser" value="org.apache.struts2.dispatcher.multipart.JakartaMultiPartRequest" />
 	<!-- costanti per il fileUpload interceptor: settare solo se necessarie -->
@@ -112,6 +113,10 @@
 		<action name="HomePage" class="it.csi.sicee.siceefree.presentation.siceefree.action.HomeAction">
 			<result name="GO_TO_cpHome" type="chain">
 			    <param name="actionName">cpHome</param>
+			    <param name="namespace">/base/main</param>
+			</result>
+			<result name="GO_TO_cpDettWMS" type="chain">
+			    <param name="actionName">cpDettWMS</param>
 			    <param name="namespace">/base/main</param>
 			</result>
 			<result name="GO_TO_cpDisabled" type="chain">

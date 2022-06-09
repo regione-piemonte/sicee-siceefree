@@ -14,12 +14,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.Serializable;
+import java.util.List;
 
 import javax.activation.CommandMap;
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
 import javax.activation.MailcapCommandMap;
+import javax.mail.Authenticator;
 import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
@@ -57,7 +60,7 @@ public class MailSender implements Serializable {
 	 *             the exception
 	 */
 	public void sendMail(it.csi.sicee.siceefree.util.Mail emailVo,
-			Documento doc, byte[] ricevutaInvioByte) throws Exception {
+			List<Documento> docs, byte[] ricevutaInvioByte) throws Exception {
 		log.debug("[MailSender::sendMail] BEGIN");
 		// GenericUtil.stampaVO(emailVO);
 		// Create a mail session
@@ -67,11 +70,27 @@ public class MailSender implements Serializable {
 		
 		try {
 			java.util.Properties props = new java.util.Properties();
-			props.put("mail.smtp.host", emailVo.getHost());
-			props.put("mail.smtp.port", emailVo.getPort());
-			props.put("mail.debug", "true"); // Aggiunto per verifica problema della Mail
+//			props.put("mail.smtp.host", emailVo.getHost());
+//			props.put("mail.smtp.port", emailVo.getPort());
+//			props.put("mail.debug", "true"); // Aggiunto per verifica problema della Mail
 
-			Session session = Session.getDefaultInstance(props, null);
+			props.put("mail.transport.protocol", "smtp");
+			props.put("mail.smtp.host", emailVo.getHost());
+			props.put("mail.smtp.auth", "true");
+			props.put("mail.smtp.port", emailVo.getPort());
+			props.put("mail.smtp.starttls.enable", "true");
+
+			//create Authenticator object to pass in Session.getInstance argument
+			Authenticator auth = new Authenticator() {
+				//override the getPasswordAuthentication method
+				protected PasswordAuthentication getPasswordAuthentication() {
+					return new PasswordAuthentication(emailVo.getIdEmail(), emailVo.getPassword());
+				}
+			};
+			
+			Session session=Session.getInstance(props,auth);
+			
+//			Session session = Session.getDefaultInstance(props, null);
 			//Session session = Session.getInstance(props, null);
 
 			// Construct the message
@@ -91,22 +110,24 @@ public class MailSender implements Serializable {
 			html.setContent(emailVo.getHtml(), "text/html");
 
 			// create and fill the second message part
-			if (doc != null) {
-				MimeBodyPart attachmentPart = new MimeBodyPart();
-				
+			if (docs != null) {
 				// JIRA SICEE-515
-				allegato = createFileWithData(doc);
-				
-				FileDataSource fileDataSource = new FileDataSource(allegato) {
-					@Override
-					public String getContentType() {
-						return "application/pkcs7-mime";
+				for(Documento doc:docs) {
+					MimeBodyPart attachmentPart = new MimeBodyPart();
+					log.debug("DOCS SISE: "+docs.size());
+					if(doc.getDoc()!=null && doc.getNome()!=null) {
+						allegato = createFileWithData(doc);
+						FileDataSource fileDataSource = new FileDataSource(allegato) {
+							@Override
+							public String getContentType() {
+								return "application/pkcs7-mime";
+							}
+						};
+						attachmentPart.setDataHandler(new DataHandler(fileDataSource));
+						attachmentPart.setFileName(doc.getNome());
+						mp.addBodyPart(attachmentPart);
 					}
-				};
-				
-				attachmentPart.setDataHandler(new DataHandler(fileDataSource));
-				attachmentPart.setFileName(doc.getNome());
-				mp.addBodyPart(attachmentPart);
+				}
 			}
 			// create the Multipart and its parts to it
 
@@ -194,9 +215,9 @@ public class MailSender implements Serializable {
 		}
 
 	}
-
+	
 	private static File createFileWithData(String nome, byte[] doc) throws IOException
-	{		
+	{
 		int pos = nome.lastIndexOf(".");
 		File file = File.createTempFile(nome, nome.substring(pos));
 //		file.deleteOnExit();
@@ -216,7 +237,7 @@ public class MailSender implements Serializable {
 	 *             Signals that an I/O exception has occurred.
 	 */
 	private File createFileWithData(Documento doc) throws IOException {
-		
+
 		return createFileWithData(doc.getNome(), doc.getDoc());
 //		int pos = doc.getNome().lastIndexOf(".");
 //		File file = File.createTempFile(doc.getNome(),

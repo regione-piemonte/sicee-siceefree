@@ -24,6 +24,21 @@ public class BackEndFacade {
 	// ApplicationData: [idDocumento, scope:USER_SESSION]
 	public static final String APPDATA_IDDOCUMENTO_CODE = "appDataidDocumento";
 
+	// ApplicationData: [paginaSelezionata, scope:USER_SESSION]
+	public static final String APPDATA_PAGINASELEZIONATA_CODE = "appDatapaginaSelezionata";
+
+	// ApplicationData: [currentDettaglioGeografico, scope:USER_SESSION]
+	public static final String APPDATA_CURRENTDETTAGLIOGEOGRAFICO_CODE = "appDatacurrentDettaglioGeografico";
+
+	// ApplicationData: [listDettaglioGeografico, scope:USER_SESSION]
+	public static final String APPDATA_LISTDETTAGLIOGEOGRAFICO_CODE = "appDatalistDettaglioGeografico";
+
+	// ApplicationData: [WMSCoordinates, scope:USER_SESSION]
+	public static final String APPDATA_WMSCOORDINATES_CODE = "appDataWMSCoordinates";
+
+	// ApplicationData: [WMSClass, scope:USER_SESSION]
+	public static final String APPDATA_WMSCLASS_CODE = "appDataWMSClass";
+
 	// ApplicationData: [filtroAce, scope:USER_SESSION]
 	public static final String APPDATA_FILTROACE_CODE = "appDatafiltroAce";
 
@@ -488,6 +503,96 @@ public class BackEndFacade {
 	////////////////////////////////////////////////////////////////////////////////////
 
 	/**
+	 * richiama il metodo gestisciSuccessivo utilizzato in un ExecCommand
+	 * del ContentPanel cpDettWMS
+	 */
+	public ExecResults gestisciSuccessivo(
+
+			it.csi.sicee.siceefree.dto.main.CpDettWMSModel theModel
+
+	) throws BEException {
+		// l'esecuzione viene delegata al bean corrispondente al ContentPanel cpDettWMS
+		return getCPBECpDettWMS().gestisciSuccessivo(theModel);
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////
+
+	/**
+	 * richiama il metodo gestisciPrecedente utilizzato in un ExecCommand
+	 * del ContentPanel cpDettWMS
+	 */
+	public ExecResults gestisciPrecedente(
+
+			it.csi.sicee.siceefree.dto.main.CpDettWMSModel theModel
+
+	) throws BEException {
+		// l'esecuzione viene delegata al bean corrispondente al ContentPanel cpDettWMS
+		return getCPBECpDettWMS().gestisciPrecedente(theModel);
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////
+
+	/**
+	 * richiama il metodo clearFields utilizzato in un ExecCommand
+	 * del ContentPanel cpDettWMS
+	 */
+	public ExecResults clearFields(
+
+			it.csi.sicee.siceefree.dto.main.CpDettWMSModel theModel
+
+	) throws BEException {
+		// l'esecuzione viene delegata al bean corrispondente al ContentPanel cpDettWMS
+		return getCPBECpDettWMS().clearFields(theModel);
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////
+
+	/**
+	 * richiama il metodo visualizzaInterrogazioneGeoportale utilizzato in un ExecCommand
+	 * del ContentPanel cpDettWMS
+	 */
+	public ExecResults visualizzaInterrogazioneGeoportale(
+
+			it.csi.sicee.siceefree.dto.main.CpDettWMSModel theModel
+
+	) throws BEException {
+		// l'esecuzione viene delegata al bean corrispondente al ContentPanel cpDettWMS
+		return getCPBECpDettWMS().visualizzaInterrogazioneGeoportale(theModel);
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////
+
+	/**
+	 * richiama il metodo checkAppdata utilizzato in un ExecCommand
+	 * del ContentPanel cpDettWMS
+	 */
+	public ExecResults checkAppdata(
+
+			it.csi.sicee.siceefree.dto.main.CpDettWMSModel theModel
+
+	) throws BEException {
+		// l'esecuzione viene delegata al bean corrispondente al ContentPanel cpDettWMS
+		return getCPBECpDettWMS().checkAppdata(theModel);
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////
+
+	/**
+	 * richiama il metodo refreshInterrogazioneGeoportale utilizzato in un ExecCommand
+	 * del ContentPanel cpDettWMS
+	 */
+	public ExecResults refreshInterrogazioneGeoportale(
+
+			it.csi.sicee.siceefree.dto.main.CpDettWMSModel theModel
+
+	) throws BEException {
+		// l'esecuzione viene delegata al bean corrispondente al ContentPanel cpDettWMS
+		return getCPBECpDettWMS().refreshInterrogazioneGeoportale(theModel);
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////
+
+	/**
 	 * Implementazione del metodo verificaRicercaAce definito in un ExecCommand del
 	 * ContentPanel 
 	 */
@@ -569,6 +674,61 @@ public class BackEndFacade {
 			/*PROTECTED REGION END*/
 		} catch (Exception e) {
 			log.error("[BackEndFacade::checkEnabled] Errore occorso nell'esecuzione del metodo:" + e, e);
+			throw new BEException("Errore occorso nell'esecuzione del metodo:" + e, e);
+		}
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////
+
+	/**
+	 * Implementazione del metodo initApplicativo definito in un ExecCommand del
+	 * ContentPanel 
+	 */
+	public ExecResults initApplicativo(
+
+			it.csi.sicee.siceefree.dto.GlobalHomeModel theModel
+
+	) throws BEException {
+		/// definizione costanti di outcome
+		final String INITAPPLICATIVO_OUTCOME_CODE__OK = //NOSONAR  Reason:EIAS
+				"OK"; //NOSONAR  Reason:EIAS
+		final String INITAPPLICATIVO_OUTCOME_CODE__WMS = //NOSONAR  Reason:EIAS
+				"WMS"; //NOSONAR  Reason:EIAS
+		///
+		try {
+			ExecResults result = new ExecResults();
+			/*PROTECTED REGION ID(R-544167614) ENABLED START*/
+			// inserire qui la logica applicativa da eseguire:
+			log.debug("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+			if (theModel.getWms() != null) {
+				if (theModel.getAppDataWMSCoordinates() == null && theModel.getAppDataWMSClass() == null) {
+					log.debug("appdata null");
+					theModel.setAppDataWMSCoordinates(theModel.getWms());
+					theModel.setAppDataWMSClass(theModel.getClasse());
+				} else if ((!theModel.getAppDataWMSCoordinates().equals(theModel.getWms()))
+						|| (!theModel.getAppDataWMSClass().equals(theModel.getClasse()))) {
+					log.debug("DIVERSI");
+					theModel.setAppDatacurrentDettaglioGeografico(null);
+					theModel.setAppDatalistDettaglioGeografico(null);
+					theModel.setAppDataWMSCoordinates(theModel.getWms());
+					theModel.setAppDataWMSClass(theModel.getClasse());
+				}
+				// Se c'e' questo parametro vuol dire che si e' stati chiamati dal WMS
+				result.setResultCode(INITAPPLICATIVO_OUTCOME_CODE__WMS);
+
+			} else {
+				// impostazione del result code 
+				result.setResultCode(INITAPPLICATIVO_OUTCOME_CODE__OK);
+			}
+
+			// modifica degli attributi del model (che verranno propagati allo strato
+			// di presentation). si puo' agire anche direttamente sull'attributo "session".
+
+			result.setModel(theModel);
+			return result;
+			/*PROTECTED REGION END*/
+		} catch (Exception e) {
+			log.error("[BackEndFacade::initApplicativo] Errore occorso nell'esecuzione del metodo:" + e, e);
 			throw new BEException("Errore occorso nell'esecuzione del metodo:" + e, e);
 		}
 	}
@@ -806,6 +966,25 @@ public class BackEndFacade {
 	 */
 	public it.csi.sicee.siceefree.business.main.CPBECpDisabled getCPBECpDisabled() {
 		return this.cPBECpDisabled;
+	}
+
+	/**
+	 * riferimento al CPBE del content panel cpDettWMS
+	 */
+	private it.csi.sicee.siceefree.business.main.CPBECpDettWMS cPBECpDettWMS = null;
+
+	/**
+	 * riferimento al CPBE del content panel cpDettWMS
+	 */
+	public void setCPBECpDettWMS(it.csi.sicee.siceefree.business.main.CPBECpDettWMS bean) {
+		this.cPBECpDettWMS = bean;
+	}
+
+	/**
+	 * riferimento al CPBE del content panel cpDettWMS
+	 */
+	public it.csi.sicee.siceefree.business.main.CPBECpDettWMS getCPBECpDettWMS() {
+		return this.cPBECpDettWMS;
 	}
 
 	//////////////////////////////////////////////////////////////////////////////

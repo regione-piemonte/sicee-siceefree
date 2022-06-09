@@ -1,0 +1,80 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ClearAppDataCommand" ,
+	"attributesToBeRemovedFromSession":["listDettaglioGeografico","currentDettaglioGeografico"]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.NOPCommand" }
+],
+	"esiti":["OK"],
+	"nomeMetodo":"clearFields",
+	"appDataToStore":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":true,
+	"targetsWidgets":["tfCertificato","tfUbicazione","tfScadenza","tfDestinazioneDuso","tfAnnoCostruzione","tfAnnoUltRist","tfVolLordorisc","tfVolLordoRinf","tfMotivoRilascio","tfClasseEnergetica","tfRifCatastali","tfFoglio","tfsezione","tfParticella","tfSub","btSuccessivo","btPrecedente"],
+	"targetsMenuElement":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.OnOffCommand" ,
+	"enable":true,
+	"targetsWidgets":["btPrecedente","btSuccessivo"],
+	"targetsMenuElement":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.OnOffCommand" ,
+	"enable":false,
+	"targetsWidgets":["btPrecedente"],
+	"targetsMenuElement":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ActivateMultiPanelItemCommand" ,
+	"containerName":"multiDataPanel",
+	"contentPanelName":"cpDettWMS",
+	"itemName": "fpDati"}
+] 
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":false,
+	"targetsWidgets":["tfCertificato","tfUbicazione","tfScadenza","tfDestinazioneDuso","tfAnnoCostruzione","tfAnnoUltRist","tfVolLordorisc","tfVolLordoRinf","tfMotivoRilascio","tfClasseEnergetica","tfRifCatastali","tfFoglio","tfsezione","tfParticella","tfSub","btSuccessivo","btPrecedente"],
+	"targetsMenuElement":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.OnOffCommand" ,
+	"enable":false,
+	"targetsWidgets":["btPrecedente","tfCertificato","tfUbicazione","tfScadenza","tfDestinazioneDuso","tfAnnoCostruzione","tfAnnoUltRist","tfVolLordorisc","tfVolLordoRinf","tfMotivoRilascio","tfClasseEnergetica","tfRifCatastali","tfFoglio","tfsezione","tfParticella","tfSub","btSuccessivo"],
+	"targetsMenuElement":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ActivateMultiPanelItemCommand" ,
+	"containerName":"multiDataPanel",
+	"contentPanelName":"cpDettWMS",
+	"itemName": "fpMessaggio"}
+] 
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.VisibilityCommand" ,
+	"show":true,
+	"targetsWidgets":["tfCertificato","tfUbicazione","tfScadenza","tfDestinazioneDuso","tfAnnoCostruzione","tfAnnoUltRist","tfVolLordorisc","tfVolLordoRinf","tfMotivoRilascio","tfClasseEnergetica","tfRifCatastali","tfFoglio","tfsezione","tfParticella","tfSub","btSuccessivo","btPrecedente"],
+	"targetsMenuElement":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.OnOffCommand" ,
+	"enable":false,
+	"targetsWidgets":["btSuccessivo","btPrecedente"],
+	"targetsMenuElement":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ActivateMultiPanelItemCommand" ,
+	"containerName":"multiDataPanel",
+	"contentPanelName":"cpDettWMS",
+	"itemName": "fpDati"}
+] 
+}
+],
+	"esiti":["OK","KO","OK_SINGOLO"],
+	"nomeMetodo":"visualizzaInterrogazioneGeoportale",
+	"appDataToStore":[]
+}
+] 
+}

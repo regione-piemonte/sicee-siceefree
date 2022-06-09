@@ -281,6 +281,14 @@
   	<replace file="${build}/temp/conf/ejb/business/siceefree/META-INF/siceefree.properties" 
   	 			token="@mail.mitt@"  
   	  			value="${mail.mitt}"/>
+
+  	<replace file="${build}/temp/conf/ejb/business/siceefree/META-INF/siceefree.properties" 
+  	 			token="@mail.user@"  
+  	  			value="${mail.user}"/>
+
+  	<replace file="${build}/temp/conf/ejb/business/siceefree/META-INF/siceefree.properties" 
+  	 			token="@mail.pwd@"  
+  	  			value="${mail.pwd}"/>
   	
   	<replace file="${build}/temp/conf/ejb/business/siceefree/META-INF/siceefree.properties" 
   				token="@siceews.url@" 

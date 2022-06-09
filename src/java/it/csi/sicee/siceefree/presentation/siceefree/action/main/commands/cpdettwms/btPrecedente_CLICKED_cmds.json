@@ -1,0 +1,32 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.OnOffCommand" ,
+	"enable":true,
+	"targetsWidgets":["btSuccessivo","btPrecedente"],
+	"targetsMenuElement":[]
+}
+] 
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.NOPCommand" }
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.OnOffCommand" ,
+	"enable":true,
+	"targetsWidgets":["btSuccessivo"],
+	"targetsMenuElement":[]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.OnOffCommand" ,
+	"enable":false,
+	"targetsWidgets":["btPrecedente"],
+	"targetsMenuElement":[]
+}
+] 
+}
+],
+	"esiti":["OK","KO","OK_PRIMO"],
+	"nomeMetodo":"gestisciPrecedente",
+	"appDataToStore":[]
+}

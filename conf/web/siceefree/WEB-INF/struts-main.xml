@@ -73,6 +73,17 @@
 	
 </action>
 
+<action name="cpDettWMS" class="it.csi.sicee.siceefree.presentation.siceefree.action.main.CpDettWMSAction">
+	<result name="input">/jsp/cpDettWMS.jsp</result>
+	<result name="success">/jsp/cpDettWMS.jsp</result>
+	
+	<result name="GO_TO_BackPage" type="chain">
+		<param name="actionName">${backActionName}</param>
+		<param name="namespace">${backNamespace}</param>
+	</result>
+	
+</action>
+
 		<!--PROTECTED REGION ID(R-69127981) ENABLED START-->
 		<!-- inserire qui la dichiarazione di azioni aggiuntive hand-written -->
 		<!--PROTECTED REGION END-->

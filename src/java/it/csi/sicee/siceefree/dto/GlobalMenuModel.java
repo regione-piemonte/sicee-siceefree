@@ -24,24 +24,6 @@ public class GlobalMenuModel extends BaseSessionAwareDTO {
 	////////////////////////////////////////////////////////////////////
 
 	/**
-	 * imposta il valore dell' ApplicationData 'appDatanotaio'
-	 * @param value
-	 * @generated
-	 */
-
-	public void setAppDatanotaio(it.csi.sicee.siceefree.dto.notaio.Notaio value) {
-		getSession().put("appDatanotaio", value);
-	}
-
-	/**
-	 * legge il valore dell' ApplicationData 'appDatanotaio'
-	 * @generated
-	 */
-	public it.csi.sicee.siceefree.dto.notaio.Notaio getAppDatanotaio() {
-		return (it.csi.sicee.siceefree.dto.notaio.Notaio) (getSession().get("appDatanotaio"));
-	}
-
-	/**
 	 * imposta il valore dell' ApplicationData 'appDatacheckNotaio'
 	 * @param value
 	 * @generated
@@ -57,6 +39,24 @@ public class GlobalMenuModel extends BaseSessionAwareDTO {
 	 */
 	public java.lang.Boolean getAppDatacheckNotaio() {
 		return (java.lang.Boolean) (getSession().get("appDatacheckNotaio"));
+	}
+
+	/**
+	 * imposta il valore dell' ApplicationData 'appDatanotaio'
+	 * @param value
+	 * @generated
+	 */
+
+	public void setAppDatanotaio(it.csi.sicee.siceefree.dto.notaio.Notaio value) {
+		getSession().put("appDatanotaio", value);
+	}
+
+	/**
+	 * legge il valore dell' ApplicationData 'appDatanotaio'
+	 * @generated
+	 */
+	public it.csi.sicee.siceefree.dto.notaio.Notaio getAppDatanotaio() {
+		return (it.csi.sicee.siceefree.dto.notaio.Notaio) (getSession().get("appDatanotaio"));
 	}
 
 }

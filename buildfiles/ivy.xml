@@ -204,8 +204,8 @@
 			<artifact name="csi-stadapter-1.4.5" type="jar"/>
 			<artifact name="csi-tools-1.4.5" type="jar"/>
 		</dependency>
-		<dependency org="csipiemonte" name="siceeorch" rev="6.1.0" >
-			<artifact name="siceeorch-siceeorch-client-6.1.0" type="jar"/>
+		<dependency org="csipiemonte" name="siceeorch" rev="6.5.0" >
+			<artifact name="siceeorch-siceeorch-client-6.5.0" type="jar"/>
 		</dependency>
 		<dependency org="others" name="cglib-nodep" rev="2.1_3" />
 		

@@ -1,9 +1,21 @@
 
 { "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
 	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
 { "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpCommand" ,
 	"name": "cpHome", 
 	"pushCurrent":false
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpCommand" ,
+	"name": "cpDettWMS", 
+	"pushCurrent":false
+}
+],
+	"esiti":["OK","WMS"],
+	"nomeMetodo":"initApplicativo",
+	"appDataToStore":["appDataWMSCoordinates","appDataWMSClass","appDatalistDettaglioGeografico","appDatacurrentDettaglioGeografico"]
 }
 ,
 { "class": "it.csi.sicee.siceefree.presentation.siceefree.action.JumpCommand" ,

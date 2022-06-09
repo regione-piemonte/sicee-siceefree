@@ -29,6 +29,10 @@ public final class Constants {
 	/** The mail port. */
 	public static String MAIL_PORT = rb.getString("mail.port");
 
+	public static String MAIL_USER = rb.getString("mail.user");
+	
+	public static String MAIL_PWD = rb.getString("mail.pwd");
+
 	/** The mail mitt. */
 	public static String MAIL_MITT = "MITTENTE_EMAIL_NOTAIO";
 
@@ -46,6 +50,8 @@ public final class Constants {
 
 	/** The Constant CODICE_ACE. */
 	public static final String CODICE_ACE = "@codice.ace@";
+
+	public static final String CODICE_IMPIANTO = "@codice@";
 
 	/** The Constant NOME_CERTIFICATORE. */
 	public static final String NOME_CERTIFICATORE = "@nome.certificatore@";

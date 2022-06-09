@@ -41,6 +41,9 @@
 		<property name="CPBECpDisabled">
 			<ref bean="CPBECpDisabled"/>
 		</property>
+		<property name="CPBECpDettWMS">
+			<ref bean="CPBECpDettWMS"/>
+		</property>
 	</bean>
 	
 	<!-- bean relativi ai singoli content panel -->
@@ -67,6 +70,8 @@
 	<bean id="CPBECpErrorPage" class="it.csi.sicee.siceefree.business.main.CPBECpErrorPage">
 	</bean>
 	<bean id="CPBECpDisabled" class="it.csi.sicee.siceefree.business.main.CPBECpDisabled">
+	</bean>
+	<bean id="CPBECpDettWMS" class="it.csi.sicee.siceefree.business.main.CPBECpDettWMS">
 	</bean>
 	
 	

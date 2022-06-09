@@ -1,0 +1,31 @@
+
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.SequenceCommand" ,
+	"actions": [{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ClearAppDataCommand" ,
+	"attributesToBeRemovedFromSession":["listDettaglioGeografico","currentDettaglioGeografico"]
+}
+,{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.ExecCommand" ,
+	"azioni":[
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.OnOffCommand" ,
+	"enable":false,
+	"targetsWidgets":["btPrecedente"],
+	"targetsMenuElement":[]
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.OnOffCommand" ,
+	"enable":false,
+	"targetsWidgets":["btPrecedente","tfCertificato","tfUbicazione","tfScadenza","tfDestinazioneDuso","tfAnnoCostruzione","tfAnnoUltRist","tfVolLordorisc","tfVolLordoRinf","tfMotivoRilascio","tfClasseEnergetica","tfRifCatastali","tfFoglio","tfsezione","tfParticella","tfSub","btSuccessivo"],
+	"targetsMenuElement":[]
+}
+,
+{ "class": "it.csi.sicee.siceefree.presentation.siceefree.action.OnOffCommand" ,
+	"enable":false,
+	"targetsWidgets":["btSuccessivo","btPrecedente"],
+	"targetsMenuElement":[]
+}
+],
+	"esiti":["OK","KO","OK_SINGOLO"],
+	"nomeMetodo":"visualizzaInterrogazioneGeoportale",
+	"appDataToStore":[]
+}
+] 
+}
